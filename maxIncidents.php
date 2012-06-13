@@ -38,7 +38,7 @@ function curlWrap($url, $json, $action)
 
 
 //Get Incident Data
-$id = $_GET[id];
+$id = strip_tags($_GET[id]);
 $data = curlWrap("/tickets/".$id.".json", null, "GET");
 
 //Find problem ticket and count incidents
